@@ -43,7 +43,7 @@ export const useNobeliumGlobal = () => useContext(ThemeGlobalNobelium)
  */
 const LayoutBase = props => {
   const { children, post } = props
-  const fullWidth = post?.fullWidth ?? false
+  const fullWidth = post?.fullWidth ?? true
   const { onLoading } = useGlobal()
   const searchModal = useRef(null)
   // 在列表中进行实时过滤
