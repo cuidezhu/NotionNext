@@ -43,7 +43,7 @@ export const useNobeliumGlobal = () => useContext(ThemeGlobalNobelium)
  */
 const LayoutBase = props => {
   const { children, post } = props
-  const fullWidth = post?.fullWidth ?? true
+  const fullWidth = post?.fullWidth ?? false
   const { onLoading } = useGlobal()
   const searchModal = useRef(null)
   // 在列表中进行实时过滤
@@ -64,7 +64,7 @@ const LayoutBase = props => {
         {/* 主区 */}
         <main
           id='out-wrapper'
-          className={`relative m-auto flex-grow w-full transition-all ${!fullWidth ? 'max-w-2xl px-4' : 'px-4 md:px-24'}`}>
+          className={`relative m-auto flex-grow w-full transition-all ${!fullWidth ? 'max-w-4xl px-4' : 'px-4 md:px-24'}`}>
           <Transition
             show={!onLoading}
             appear={true}
